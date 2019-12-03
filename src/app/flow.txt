@@ -1,0 +1,7 @@
+1.fetch categories comp statically.
+2.On select on dropdown for eg:food, the id will be categories[0] call food component.
+3. on selct particular food,eg:tomato the id will be food[0] call details comp
+
+http://mapi.trycatchtech.com/v1/food_catering/category_list
+http://mapi.trycatchtech.com/v1/food_catering/product_list?category_id=1
+http://mapi.trycatchtech.com/v1/food_catering/single_product?product_id=2

@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row mt-4">
+</div>
+<div class="gallery" id="gallery">
+  <div class="mb-3 pics animation all 2">
+    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" alt="Card image cap">
+  </div>
+  <div class="mb-3 pics animation all 1">
+    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg" alt="Card image cap">
+  </div>
+  <div class="mb-3 pics animation all 1">
+    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg" alt="Card image cap">
+  </div>
+  <div class="mb-3 pics animation all 2">
+    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" alt="Card image cap">
+  </div>
+  <div class="mb-3 pics animation all 2">
+    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Card image cap">
+  </div>
+  <div class="mb-3 pics animation all 1">
+    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" alt="Card image cap">
+  </div>
+</div>
+</div>
+<script>
+function name() {
+var selectedClass = "";
+document.querySelector(".filter").click(function(){
+selectedClass = this.attr("data-rel");
+document.querySelector("#gallery").fadeTo(100, 0.1);
+document.querySelector("#gallery div").not("."+selectedClass).removeClass('animation');
+setTimeout(function() {
+  document.querySelector("."+selectedClass).addClass('animation');
+  // document.querySelector("#gallery").fadeTo(300, 1);
+}, 300);
+});
+};
+</script>

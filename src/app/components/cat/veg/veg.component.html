@@ -1,0 +1,27 @@
+<div class="container" >
+<div class="row">
+  <div class="col-md-4"*ngFor="let list of vegArr" >
+<div class="card card-cascade" >
+    <div class="view view-cascade overlay">
+      <img class="card-img-top img-fluid" [src]=list.image[0] alt="Card image cap" style="width: 680px;height: 350px;">
+      <a>
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+    <div class="card-body card-body-cascade text-center">
+      <h4 class="card-title"><strong>{{list.title}}</strong></h4>
+      <h6 class="font-weight-bold indigo-text py-2">{{list.price}}</h6>
+      <p class="card-text">{{list.description}} </p>
+      <ng-container >
+          <a href="#" type="button" (click)="onSelect($event)" class="btn btn-primary" routerLinkActive="active" routerLink="{{list.id}}">Read More</a>
+      </ng-container>
+    </div>
+  </div>
+  <!-- <ng-container (change)="onSelect($event)"> 
+      <ng-container *ngFor="let details of vegArr">
+        <a type="button" class="btn btn-primary" routerLinkActive="active" routerLink="{{details.id}}">read more</a>
+      </ng-container>
+    </ng-container> -->
+</div>
+</div>
+</div>

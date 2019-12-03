@@ -1,0 +1,31 @@
+<!-- Default form subscription -->
+<div class="container">
+<form [formGroup]='cform' class=" border border-light p-5 animated bounceInRight " (submit)=csubmit() >
+
+    <p class="h4 mb-4 text-center">Subscribe</p>
+
+    <p class="text-center">Join our mailing list. We write rarely, but only the best content.</p>
+
+    <p class="text-center">
+        <a href="" target="_blank">See the last newsletter</a>
+    </p>
+
+    <!-- Name -->
+    <input type="text" id="defaultSubscriptionFormPassword" class="form-control mb-4" placeholder="Name" formControlName="name">
+    <p *ngIf ="f.name.touched && f.name.invalid" class="text-danger">Fied required</p>
+
+    <!-- Email -->
+    <input type="email" id="defaultSubscriptionFormEmail" class="form-control mb-4" placeholder="E-mail" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required">Email is required</div>
+        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+    </div>
+
+    <!-- Sign in button -->
+    <button class="btn btn-info btn-block" type="submit" (click)="onReset()">Sign in</button>
+
+
+</form>
+</div>
+<!-- Default form subscription -->
+

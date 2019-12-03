@@ -1,0 +1,65 @@
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark secondary-color">
+    <a class="navbar-brand" href="#">
+        <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="30" alt="mdb logo">
+      </a>
+  
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item pr-4" routerLinkActive="active">
+          <a class="nav-link" routerLink = "home" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item pr-4" routerLinkActive="active">
+          <a class="nav-link" routerLink = "about" href="#">About Us</a>
+        </li>
+        <li class="nav-item pr-4" routerLinkActive="active">
+          <a class="nav-link" routerLink = "contact" href="#">Contact Us</a>
+        </li>
+  
+        <!-- Dropdown -->
+        <!-- <li class="nav-item dropdown pr-4" >
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" routerLinkActive="active" routerLink = "categories" >Categories</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" routerLinkActive="active" routerLink ='1' href="#">Veg</a>
+            <a class="dropdown-item" routerLinkActive="active"  routerLink ='nonveg' href="#">Non veg</a>
+          </div>
+        </li> -->
+        <!-- <li class="nav-item dropdown pr-4" >
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false" routerLinkActive="active" routerLink = "categories" >Categories</a>
+        <app-categories></app-categories>
+      </li> -->
+
+      <li class="nav-item pr-4">
+        <form class="form-group">
+          <select class="from-control" class="btn btn-secondary dropdown-toggle" (change)="onSelect($event)">
+              <option><a target="_blank" routerLinkActive="active" routerLink="/categories" href="#">Categories</a></option>
+              <option *ngFor="let category of arr" [value]="category.id" style="cursor: pointer;" ><a target="_blank" routerLinkActive="active" routerLink="{{category.cat_name}}" href="#">{{category.cat_name}}</a></option>
+          </select>
+      </form>     
+     </li>
+  
+      </ul>
+      <!-- Links -->
+      <form class="form-inline">
+        <div class="md-form my-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        </div>
+      </form>
+    </div>
+    <!-- Collapsible content -->
+  
+  </nav>
+  <!--/.Navbar-->

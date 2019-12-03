@@ -1,0 +1,22 @@
+<div class="container">
+        <div class="row mt-4" >
+        <div class="col-md-4" *ngFor="let users of arr;let i =index">
+        <div class="card card-cascade" >
+        <div class="view view-cascade overlay">
+            <img class="card-img-top" [src]=users.urlToImage alt="Card image cap">
+            <a>
+            <div class="mask rgba-white-slight"></div>
+            </a>
+        </div>
+        <div class="card-body card-body-cascade text-center">
+            <h4 class="card-title"><strong>{{users.author}}</strong></h4>
+            <h6 class="font-weight-bold indigo-text py-2"> {{users.title}}</h6>
+            <p class="card-text">{{users.description}} </p>
+            <button class="btn btn-primary" routerLinkActive="active" [routerLink]="['/food',10]">READ MORE</button>
+        </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="btn btn-primary" (click)="getFoodData()">click</div> -->
+    

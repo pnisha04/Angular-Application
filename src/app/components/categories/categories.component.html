@@ -1,0 +1,42 @@
+   
+    
+    <!-- <ng-conta   iner *ngFor="let category of arr;let i=index">
+    <div (click)="onSelect(category)" class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink"   >
+        <a class="dropdown-item" routerLinkActive="active" routerLink="{{category.id}}" href="#">{{i}} {{category.cat_name}}</a>
+    </div>
+</ng-container> -->
+
+
+
+<!-- <form class="form-group">
+    <select class="from-control" class="btn btn-secondary dropdown-toggle" (change)="onSelect($event)">
+        <option>select food</option>
+        <option *ngFor="let category of arr" [value]="category.id" style="cursor: pointer;" ><a target="_blank" routerLinkActive="active" routerLink="{{category.cat_name}}" href="#">{{category.cat_name}}</a></option>
+    </select>
+</form> -->
+
+<!-- Card -->
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-md-6" *ngFor="let details of arr" >
+<div class="card">
+    <!-- Card image -->
+    <img class="card-img-top" [src]= details.cat_image alt="Card image cap" style="width:600px;height:450px;" class="img-fluid">
+    <!-- Card content -->
+    <div class="card-body">
+      <!-- Title -->
+      <h4 class="card-title"><a>{{details.cat_name}}</a></h4>
+      <!-- Text -->
+      <!-- Button -->
+      <a  (click)="onSelect(e)" href="#" class="btn btn-primary"  routerLinkActive="active" routerLink="{{details.id}}">Button</a>
+      <!-- <a target="_blank" class="btn btn-primary" routerLinkActive="active" routerLink="{{category.cat_name}}" href="#">Button</a> -->
+    </div> 
+  </div>
+
+</div>
+</div>
+</div>
+  <!-- Card -->
+
+
+
